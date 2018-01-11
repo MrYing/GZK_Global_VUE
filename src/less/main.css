@@ -1,0 +1,409 @@
+@charset "utf-8";
+/*App Vue*/
+#gzk_editor {
+  margin-left: 240px;
+}
+body,
+html,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  background: #fff;
+  font-size: 12px;
+  font-family: "Microsoft YaHei", "arial", "\5b8b\4f53", "sans-serif";
+  -webkit-text-size-adjust: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 12px;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  font-family: "Microsoft YaHei", "arial", "\5b8b\4f53", "sans-serif";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  display: block;
+  border: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+input,
+label,
+select,
+option,
+textarea,
+button,
+fieldset,
+legend {
+  font-size: 12px;
+  font-family: "Microsoft YaHei", "arial", "\5b8b\4f53", "sans-serif";
+  _font-family: Arial, sans-serif;
+}
+input[type=text],
+textarea {
+  -webkit-appearance: none;
+  outline: none;
+}
+textarea {
+  resize: none;
+}
+em,
+i {
+  font-style: normal;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*
+* 左浮动
+**/
+/*
+* 右浮动
+**/
+/*
+*  清楚浮动
+**/
+.pagesNav {
+  margin-left: 20px;
+}
+/*
+* 定位  r:相对定位; a: 绝对定位; f:基于浏览器
+*/
+.clearFloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+/*
+* 左上定位
+**/
+/*
+* 右上定位
+**/
+/*
+* 左下定位
+**/
+/*
+* 左下定位
+**/
+/*
+* 上下左右垂直居中
+*  @pos: 定位位置;
+*  @left,@right,@top,@bottom 方向 (ps: .pos-cc(@top:10px;@bottom:'') 可以居上10px ;左右居中)
+**/
+/*
+* 宽度 高度
+**/
+/*
+* 文字 垂直居中
+**/
+/*
+* 文字 水平 位置
+**/
+/*
+* 元素 display
+**/
+/*
+* font 字体
+**/
+/*
+* 显示省略号
+**/
+.g_dialog_common {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.g_dialog_common > div {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 0.13rem;
+  background: #f2f2f2;
+}
+/*内容*/
+.g_dialog_common > div > div:first-child {
+  padding: 0.4rem 0.2rem ;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  border-bottom: 1px solid #c8c8c8;
+  text-align: center;
+}
+/*按钮*/
+.g_dialog_common > div > div:last-child {
+  font-size: 0.26rem;
+  height: 0.85rem;
+  color: #1277e0;
+}
+.g_alert > div > div:last-child span {
+  width: 100%;
+  height: 0.85rem;
+  line-height: 0.85rem;
+  text-align: center;
+  display: block;
+}
+.g_confirm > div > div:last-child span {
+  width: 49.5%;
+  height: 0.85rem;
+  line-height: 0.85rem;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+.g_confirm > div > div:last-child span:last-child {
+  border-left: 1px solid #c8c8c8;
+}
+/* 动画 ...*/
+@-webkit-keyframes typing {
+  0% {
+    background-color: #ffffff;
+    box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.2), 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 12px 0px 0px 0px #ffffff, 24px 0px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(255, 255, 255, 0.2), 24px 0px 0px 0px #ffffff;
+  }
+}
+@keyframes typing {
+  0% {
+    background-color: #101820;
+    box-shadow: 12px 0px 0px 0px rgba(16, 24, 32, 0.2), 24px 0px 0px 0px rgba(16, 24, 32, 0.2);
+  }
+  25% {
+    background-color: rgba(16, 24, 32, 0.4);
+    box-shadow: 12px 0px 0px 0px #101820, 24px 0px 0px 0px rgba(16, 24, 32, 0.2);
+  }
+  75% {
+    background-color: rgba(16, 24, 32, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(16, 24, 32, 0.2), 24px 0px 0px 0px #101820;
+  }
+}
+.loadingBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
+}
+.loadingBox .loadingAni {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  -webkit-animation: typing 1s linear infinite alternate;
+  -moz-animation: Typing 1s linear infinite alternate;
+  animation: typing 1s linear infinite alternate;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: -0.7rem;
+}
+.loadingBox .loading_title {
+  height: .3rem;
+  text-align: center;
+  color: #101820;
+  padding-top: 1rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*  类名  */
+/*
+* 清除浮动
+**/
+.g-clearfix {
+  *zoom: 1;
+}
+.g-clearfix:before,
+.g-clearfix:after {
+  display: table;
+  content: "";
+}
+.g-clearfix:after {
+  clear: both;
+}
+.g-fl {
+  float: left;
+  display: block;
+}
+.g-fr {
+  float: right;
+  display: block;
+}
+/*
+* 超出显示省略号
+**/
+.g-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.g-block {
+  display: block;
+}
+.g-inline-block {
+  display: inline-block;
+}
+.g-inline {
+  display: inline;
+}
+.g-none {
+  display: none;
+}
+/** 页面 回到顶端按钮样式 */
+.totop {
+  width: 40px;
+  display: none;
+  position: absolute;
+  z-index: 50;
+  bottom: 6%;
+  right: 1%;
+}
+#gzkMenuNavLeft {
+  float: left;
+  display: block;
+}
+#gzkMenuNavLeft .menuNavTopImg {
+  height: 200px;
+  background-color: #495060;
+  padding-top: 20px;
+}
+#gzkMenuNavLeft .menuNavTopImg .userName {
+  color: #f2f2f2;
+  text-align: center;
+  margin-top: 20px;
+}
+#gzkMenuNavLeft .menuNavTopImg img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+#gzkHeaderTop {
+  height: 80px;
+  background-color: #ffffff;
+  width: 100%;
+  line-height: 80px;
+  border-bottom: 1px solid #c8c8c8;
+}
+#gzkHeaderTop .gzk_title {
+  text-align: center;
+  width: 70%;
+  font-size: 20px;
+}
+#gzkHeaderTop .user_header_box {
+  padding-right: 50px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+}
+#app {
+  *zoom: 1;
+}
+#app:before,
+#app:after {
+  display: table;
+  content: "";
+}
+#app:after {
+  clear: both;
+}
+#gzk_userLogin {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 999;
+  overflow: hidden;
+}
+#gzk_userLogin .gzk_loginTitle {
+  font-size: 20px;
+  color: #fff;
+}
+#gzk_userLogin .gzk_loginTitle .ivu-form-item-label {
+  color: #fff5e6 !important;
+}
+#gzk_userLogin input {
+  background: transparent !important;
+  color: #fff5e6;
+  width: 260px;
+}
+#gzk_userLogin #login_box {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 5px;
+  padding: 30px;
+}
+#gzk_userLogin #login_box .login_btn_box {
+  text-align: center;
+}
+.ivu-form-item:after,
+.ivu-form-item:before {
+  display: inline !important;
+}

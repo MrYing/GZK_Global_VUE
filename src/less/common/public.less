@@ -1,0 +1,473 @@
+@charset "utf-8";
+body,html,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body,html{background:#fff;font-size:12px;font-family:"Microsoft YaHei","arial","\5b8b\4f53","sans-serif";-webkit-text-size-adjust:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:normal;}
+a{text-decoration:none;font-family:"Microsoft YaHei","arial","\5b8b\4f53","sans-serif";-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{display:block;border:0;}
+ul,li{list-style:none;}
+input,label,select,option,textarea,button,fieldset,legend{font-size:12px;font-family:"Microsoft YaHei","arial","\5b8b\4f53","sans-serif";_font-family:Arial,sans-serif;}
+input[type=text],textarea{-webkit-appearance:none;outline:none;}
+textarea{resize:none;}
+em,i{font-style: normal}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance: none !important; margin: 0;}
+input[type="number"]{-moz-appearance:textfield;}
+
+
+/*App Vue*/
+.gzk_editorSty{
+  .margin_l(260px);
+  .g-bgColor(#ffffff);
+  overflow: auto;
+  height: 800px;
+  .g-marginT(10px);
+  .g-marginR(20px)
+}
+
+
+//浮动
+/*
+* 左浮动
+**/
+.fl(@f:left;@display:block){
+  float: @f;
+  display: @display;
+}
+/*
+* 右浮动
+**/
+.fr(@f:right;@display:block){
+  float: @f;
+  display: @display;
+}
+
+/*
+*  清楚浮动
+**/
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+.pagesNav{
+  .margin_l(20px);
+  padding-top: 20px;
+
+}
+.min-w{
+  min-width: 1000px;
+}
+.g_fl{
+  float: left;
+}
+.g_fr{
+  float: right;
+}
+
+//-------------全局定位-------------
+/*
+* 定位  r:相对定位; a: 绝对定位; f:基于浏览器
+*/
+.rel (@rel:relative){
+  position: @rel;
+}
+.abs (@abs:absolute;){
+  position: @abs;
+}
+.fix (@fix:fixed;){
+  position: fixed;
+}
+.fon_z (@fon){
+  font-size: @fon
+}
+.margin_l(@l){
+  margin-left: @l;
+}
+.colo_r(@colo){
+  color:@colo;
+}
+.clearFloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+
+/*
+* 左上定位
+**/
+.pos-lt(@top:0; @left:0;@zIndex:1;@pos:absolute){
+  position: @pos;
+  top: @top;
+  left: @left;
+  z-index: @zIndex;
+}
+/*
+* 右上定位
+**/
+.pos-rt(@top:0; @right:0;@zIndex:1;@pos:absolute){
+  position: @pos;
+  top: @top;
+  right: @right;
+  z-index: @zIndex;
+}
+/*
+* 左下定位
+**/
+.pos-lb(@bottom:0; @left:0;@zIndex:1;@pos:absolute){
+  position: @pos;
+  bottom: @bottom;
+  left: @left;
+  z-index: @zIndex;
+}
+/*
+* 左下定位
+**/
+.pos-rb(@bottom:0; @right:0;@zIndex:1;@pos:absolute;){
+  position: @pos;
+  bottom: @bottom;
+  right: @right;
+  z-index: @zIndex;
+}
+
+/*
+* 上下左右垂直居中
+*  @pos: 定位位置;
+*  @left,@right,@top,@bottom 方向 (ps: .pos-cc(@top:10px;@bottom:'') 可以居上10px ;左右居中)
+**/
+.pos-cc(@pos:absolute;@left:0;@right:0;@top:0;@bottom:0;){
+  position: @pos;
+  left: @left;
+  right: @right;
+  top: @top;
+  bottom:@bottom;
+  margin:auto;
+}
+
+
+/*
+* 宽度 高度
+**/
+.wh(@w:100%;@h:auto;){
+  width: @w;
+  height: @h;
+}
+
+/*
+* 文字 垂直居中
+**/
+.text-ll(@h:auto;@lh:@h){
+  height: @h;
+  line-height: @lh;
+}
+
+.text-cl(@h:auto;@lh:@h){
+  text-align: center;
+  height: @h;
+  line-height: @lh;
+}
+/*
+* 文字 水平 位置
+**/
+.text-c(){
+  text-align: center;
+}
+.text-l(){
+  text-align: left;
+}
+.text-r(){
+  text-align: right;
+}
+.cup() {
+  cursor: pointer;
+}
+
+/*
+* 元素 display
+**/
+.block(@block:block){
+  display: @block;
+}
+.inline-block(@inline-block:inline-block){
+  display: @inline-block;
+}
+.inline(@inline:inline){
+  display: @inline;
+}
+.none(@none:none){
+  display: @none;
+}
+
+/*
+* font 字体
+**/
+.font(@size:14px;@color:''){
+  font-size:@size;
+  color: @color;
+}
+.font-b(@size:14px;@color:'';@weight:700){
+  font-size:@size;
+  color: @color;
+  font-weight:@weight;
+}
+.color(@color:#333){
+  color: @color;
+}
+/*
+* 显示省略号
+**/
+.ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//透明度
+.opa(@opacity:80) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+.g_dialog_common{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.g_dialog_common>div{
+  width:5rem;
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);
+  border-radius: 0.13rem;
+  background: #f2f2f2;
+}
+/*内容*/
+.g_dialog_common>div>div:first-child{
+  padding:0.4rem 0.2rem ;
+  font-size: 0.26rem;
+  line-height: 0.4rem;
+  border-bottom: 1px solid #c8c8c8;
+  text-align: center;
+}
+/*按钮*/
+.g_dialog_common>div>div:last-child{
+  font-size: 0.26rem;
+  height: 0.85rem;
+  color: #1277e0;
+}
+.g_alert>div>div:last-child span{
+  width:100%;
+  height:0.85rem;
+  line-height: 0.85rem;
+  text-align: center;
+  display: block;
+}
+
+.g_confirm>div>div:last-child span{
+  width:49.5%;
+  height:0.85rem;
+  line-height: 0.85rem;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+.g_confirm>div>div:last-child span:last-child{
+  border-left: 1px solid #c8c8c8;
+}
+
+
+/* 动画 ...*/
+
+@-webkit-keyframes typing{
+  0%{
+    background-color: rgba(255,255,255, 1);
+    box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+    24px 0px 0px 0px rgba(255,255,255,0.2);
+  }
+  25%{
+    background-color: rgba(255,255,255, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(255,255,255,2),
+    24px 0px 0px 0px rgba(255,255,255,0.2);
+  }
+  75%{ background-color: rgba(255,255,255, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+    24px 0px 0px 0px rgba(255,255,255,1);
+  }
+}
+@keyframes typing{
+  0%{
+    background-color: rgba(16,24,32, 1);
+    box-shadow: 12px 0px 0px 0px rgba(16,24,32,0.2),
+    24px 0px 0px 0px rgba(16,24,32,0.2);
+  }
+  25%{
+    background-color: rgba(16,24,32, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(16,24,32,2),
+    24px 0px 0px 0px rgba(16,24,32,0.2);
+  }
+  75%{ background-color: rgba(16,24,32, 0.4);
+    box-shadow: 12px 0px 0px 0px rgba(16,24,32,0.2),
+    24px 0px 0px 0px rgba(16,24,32,1);
+  }
+}
+.loadingBox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #fff;
+  .loadingAni{
+    width: 6px;
+    height: 6px;
+    display: block;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: Typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate;
+    .pos-cc();
+    left: -.7rem;
+  }
+  .loading_title{
+    height: .3rem;
+    text-align: center;
+    color: #101820;
+    padding-top:1rem;
+    .pos-cc();
+  }
+}
+
+.gzkPageScrollBar {
+  scrollbar-arrow-color: #F5F5F5;
+  scrollbar-face-color: #c0c0c0;
+  scrollbar-3dlight-color: #c0c0c0;
+  scrollbar-highlight-color: #F5F5F5;
+  scrollbar-shadow-color: #F5F5F5;
+  scrollbar-darkshadow-color: #c0c0c0;
+  scrollbar-track-color: #F5F5F5;
+  scrollbar-base-color: #F5F5F5;
+}
+
+/*  类名  */
+/*
+* 清除浮动
+**/
+.g-clearfix{
+  .clearfix()
+}
+.g-fl{
+.fl()
+}
+.g-fr{
+.fr()
+}
+/*
+* 超出显示省略号
+**/
+.g-ellipsis{
+.ellipsis()
+}
+.g-block{
+  .block()
+}
+.g-inline-block{
+.inline-block()
+}
+.g-inline{
+.inline()
+}
+.g-none{
+.none()
+}
+.g-text-c{
+.text-c(){
+  text-align: center;
+}
+}
+.g-text-l{
+.text-l(){
+  text-align: left;
+}
+}
+.g-text-r{
+.text-r(){
+  text-align: right;
+}
+}
+
+.g-h(@h,@lineH){
+  height: @h;
+  line-height:@lineH;
+}
+.g-bgColor(@bgc){
+  background-color:@bgc;
+}
+.g-marginT(@mpx){
+  margin-top:@mpx;
+}
+.g-marginL(@mpx){
+  margin-left:@mpx;
+}
+.g-marginR(@mpx){
+  margin-right:@mpx;
+}
+.g-marginB(@mpx){
+  margin-bottom:@mpx;
+}
+
+/*border*/
+.g-border-1(@bor){
+  border: 1px solid @bor;
+}
+.g-border(@numPX,@bor){
+  border: @numPX solid @bor;
+}
+.g-border-b(@numPX,@bor){
+  border-bottom: @numPX solid @bor;
+}
+.g-bor-radius(@radius){
+  border-radius:@radius ;
+}
+.marginAUTO(){
+  margin: 0 auto;
+}
+.wind_th(@width){
+  width: @width;
+}
+.hig_ht(@hight){
+  height: @hight;
+}
+.padd_ing(@padding){
+  padding: @padding;
+}
+.padd_ingL(@padd_ingL){
+  padding-left: @padd_ingL;
+}
+.padd_ingR(@padd_ingR){
+  padding-right: @padd_ingR;
+}
+.padd_ingT(@padd_ingT){
+  padding-top: @padd_ingT;
+}
+.padd_ingB(@padd_ingB){
+  padding-bottom: @padd_ingB;
+}
+.icon-radius(@w,@h,@px,@bgC){
+  width: @w;
+  height: @h;
+  border-radius:@px;
+  background-color: @bgC;
+  display: inline-block;
+}
+
+
+
+
+
+/** 页面 回到顶端按钮样式 */
+.totop{ width:40px; display: none;
+  position: absolute; z-index: 50; bottom: 6%; right: 1%;}
+
